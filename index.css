@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&family=Oswald:wght@200..700&display=swap');
+
+* {
+   padding: 0;
+   margin: 0;
+}
+body {
+   font-family: 'Oswald';
+}
+
+@media only screen and (min-width: 720px) {
+   main {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1fr;
+      height: 100vh;
+      max-height: 1080px;
+      overflow: hidden;
+   }
+   .section {
+      width: 100%;
+      background: #ffffff;
+   }
+   #section1 {
+      padding: 0 calc(8px + 2vw);
+      box-sizing: border-box;
+   }
+   /*  .section div {
+      border: 1px solid red;
+   } */
+   #section1 .header {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      align-content: center;
+      justify-content: space-between;
+      padding: calc(4px + 1vw) 0;
+   }
+   .webIcon {
+      width: 60px;
+      height: 60px;
+   }
+   .latest {
+      height: 100%;
+      text-align: center;
+      display: grid;
+      place-items: center;
+   }
+   .leftTitle {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      align-content: center;
+      font-weight: 800;
+      font-size: 160%;
+      padding: calc(4px + 1vw) 0;
+   }
+   .leftBanner {
+      height: 40%;
+      position: relative;
+   }
+   .leftBanner::after {
+      content: 'Y';
+      bottom: -18%;
+      right: 15%;
+      position: absolute;
+      font-size: 500%;
+      color: #f67d7d;
+      font-family: 'Merienda';
+      font-weight: 900;
+      text-shadow: 0 0 20px #dd9898;
+   }
+   .leftBanner img {
+      object-fit: cover;
+      height: 100%;
+      border-radius: 2vw;
+   }
+   .leftBanner .send {
+      position: absolute;
+      top: -2%;
+      right: -2%;
+      width: 4em;
+      height: 4em;
+      border-radius: 100%;
+      z-index: 9;
+      background: #0ac282;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 20px #1bf7abcf;
+   }
+   #section1 .leftCardInfo {
+      padding: calc(8px + 1vh) 0;
+   }
+   .leftCardInfo h2 {
+      padding: 8px 0;
+      font-size: 120%;
+   }
+   .leftCardInfo p {
+      padding: calc(2px + .25vw) 0;
+      font-size: 100%;
+      font-weight: 400;
+   }
+   .leftCardFooter {
+      display: inline-block;
+      align-items: center;
+      background: #e0e8fe;
+      padding: 4px calc(4px + 0.8vw);
+      box-sizing: border-box;
+      border-radius: 8px;
+   }
+   #section2 {
+      background-image: url('gojo.jpg');
+      object-fit: center;
+      background-repeat: no-repeat;
+      position: relative;
+      background-position: 10%;
+   }
+   #section2 .nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      place-items: center;
+      width: 42.5%;
+      height: 10vh;
+      max-height: 100px;
+      position: absolute;
+      top: 4%;
+      left: 4%;
+      background: #141529de;
+      border-radius: 2vw;
+      padding: 2px 4%;
+      box-sizing: border-box;
+   }
+   #section2 .nav div {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      box-sizing: border-box;
+   }
+   #section2 .nav div svg {
+      width: 40%!important;
+      height: 40%!important;
+   }
+   #section2 .nav div path {
+      fill: #878abcce;
+      width: 50%!important;
+      height: 50%!important;
+   }
+   #section2 .nav div.active path {
+      fill: #cedcfd;
+   }
+   .mainMenu {
+      width: 18%;
+      height: 12%;
+      background: #fff;
+      position: absolute;
+      right: -1px;
+      top: 0;
+      border-radius: 0 0 0 60%;
+      display: grid;
+      place-items: center;
+   }
+   .mainMenu .icon {
+      width: 75%;
+      height: 75%;
+      background: #000;
+      color: #fff;
+      border-radius: 100%;
+      display: grid;
+      place-items: center;
+   }
+   .mainCard {
+      position: absolute;
+      bottom: 8%;
+      left: 4%;
+      height: 40%;
+      width: 62.5%;
+      display: grid;
+      place-items: center;
+      max-height: 432px;
+   }
+   .mainCard::after {
+      content: 'X';
+      top: 40%;
+      right: -12.5%;
+      position: absolute;
+      font-size: 700%;
+      color: #7df6b3;
+      font-family: 'Merienda';
+      font-weight: 900;
+      text-shadow: 0 0 20px #1bf7abcf;
+   }
+   .mainCard .background {
+      clip-path: polygon(5% 15%, 66.12% 15%, 80.2% 29.11%, 100% 31.36%, 100% 95%, 95% 100%, 85% 100%, 70% 100%, 5% 100%, 0% 95%, 0% 20%);
+      background-color: #f2f7ff;
+      height: 115%;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      position: relative;
+      transform: translateY(-7.7%);
+      overflow: hidden;
+   }
+   .mainCard h1 {
+      font-family: 'Merienda';
+      position: absolute;
+      top: 25%;
+      left: 15%;
+      font-size: 280%;
+      font-weight: 900;
+   }
+   .mainCard h1:before {
+      content: '01';
+      color: #7072f1;
+      font-size: 60%;
+      position: absolute;
+      bottom: -30%;
+      right: -5%;
+   }
+   .mainCard .send {
+      position: absolute;
+      top: 0%;
+      right: 0%;
+      width: 5em;
+      height: 5em;
+      border-radius: 100%;
+      z-index: 9;
+      background: #f43030;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 25px #f26666cb;
+   }
+   .mainCardFooter {
+      position: absolute;
+      display: gird;
+      place-items: center;
+      align-items: center;
+      bottom: 10%;
+      left: 10%;
+      font-size: 108%;
+      background: #e0e8fe;
+      padding: 2px 8px;
+      box-sizing: border-box;
+      border-radius: 8px;
+      color: #171b23;
+   }
+   .mainCard .send svg {
+      width: 60%;
+      height: 60%;
+   }
+   #section3 {
+      background: linear-gradient(to right, #ffffff 10%, #fbc4c48f 90%);
+      padding: 0 calc(8px + 2vw);
+      box-sizing: border-box;
+   }
+   .rightBanner {
+      height: 30%;
+      position: relative;
+   }
+   .rightBanner .send {
+      position: absolute;
+      bottom: -10%;
+      right: 40%;
+      width: 4em;
+      height: 4em;
+      border-radius: 100%;
+      z-index: 9;
+      background: #f8b19f;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 0 20px #ffffffcd;
+   }
+   .rightHeader {
+      padding: 2vw 0;
+      font-size: 220%;
+      font-family: 'Merienda';
+      font-weight: 900;
+   }
+   .rightTitle {
+      display: grid;
+      grid-template-columns: 3fr 1fr;
+      align-content: center;
+      font-weight: 800;
+      font-size: 160%;
+      padding: 1vw 0;
+   }
+   .rightDes {
+      padding: 1vw 0;
+      margin-bottom: 1vw;
+      font-size: 100%;
+      font-weight: 400;
+   }
+   .rightBanner::after {
+      content: 'Z';
+      bottom: -18%;
+      right: 15%;
+      position: absolute;
+      font-size: 500%;
+      color: #7ca3ef;
+      font-family: 'Merienda';
+      font-weight: 900;
+      text-shadow: 0 0 20px #3a36eccf;
+   }
+   .rightBanner img {
+      object-fit: cover;
+      height: 100%;
+      border-radius: 2vw;
+   }
+   #section3 .nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      place-items: center;
+      width: 100%;
+      height: 10vh;
+      margin-top: 16%;
+      max-height: 100px;
+      background: linear-gradient(to right, #fbc4c48f, #00000000);
+      border-radius: 2vw;
+      padding: 2px 4%;
+      box-sizing: border-box;
+      margin-bottom: 2vw;
+   }
+   #section3 .nav div {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      box-sizing: border-box;
+   }
+   #section3 .nav div svg {
+      width: 40%!important;
+      height: 40%!important;
+   }
+   #section3 .nav div path {
+      fill: #202135ef;
+      width: 50%!important;
+      height: 50%!important;
+   }
+
+}
+@media only screen and (min-width: 1280px) and (max-width: 1440px) {
+   .mainCard {
+      bottom: 18%;
+   }
+   .mainCard h1 {
+      font-size: 330%;
+   }
+}
+@media only screen and (min-width: 1440px) and (max-width: 1920px) {
+:root {
+   font-size: calc(100% + 0.35vw);
+}
+   .mainCard {
+      bottom: 18%;
+   }
+   .mainCard h1 {
+      font-size: 365%;
+   }
+   .mainMenu {
+      width: 18%;
+      height: 12%;
+      right: -1px;
+   }
+   .mainMenu .icon {
+      width: 54%;
+      height: 55%;
+   }
+   .leftCardInfo {
+      font-size: 120%;
+   }
+   .rightDes {
+      font-size: 120%;
+   }
+   #section2 {
+      background-image: url('gojo.jpg');
+      background-position: center;
+      background-size: 110%;
+   }
+}
+@media only screen and (min-width: 1921px) {
+   :root {
+      font-size: 200%;
+   }
+   .mainCard {
+      border: 1px solid red;
+      width: 80.5% !important; /* Note the space before !important */
+   }
+}
