@@ -13,8 +13,8 @@ body {
       display: grid;
       grid-template-columns: 1fr 1.5fr 1fr;
       height: 100vh;
-      max-height: 1080px;
       overflow: hidden;
+      background: #fdfdfd; 
    }
    .section {
       width: 100%;
@@ -84,6 +84,12 @@ body {
       display: grid;
       place-items: center;
       box-shadow: 0 0 20px #1bf7abcf;
+      transition: all 0.3s ease;
+      cursor: pointer;
+   }
+   .leftBanner .send:hover {
+      transform: scale(1.1) rotate(90deg);
+      box-shadow: 0 0 30px #1bf7ab;
    }
    #section1 .leftCardInfo {
       padding: calc(8px + 1vh) 0;
@@ -138,6 +144,10 @@ body {
    #section2 .nav div svg {
       width: 40%!important;
       height: 40%!important;
+      transition: all 0.3s ease;
+   }
+   #section2 .nav div:hover svg {
+      transform: scale(1.2);
    }
    #section2 .nav div path {
       fill: #878abcce;
@@ -146,6 +156,39 @@ body {
    }
    #section2 .nav div.active path {
       fill: #cedcfd;
+   }
+   
+   /* Keyframes for animations */
+   @keyframes fadeUp {
+      from {
+         opacity: 0;
+         transform: translateY(30px);
+      }
+      to {
+         opacity: 1;
+         transform: translateY(0);
+      }
+   }
+
+   @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+   }
+
+   /* Apply animations */
+   .leftTitle, .leftCardInfo, .mainCard h1, .rightHeader, .rightTitle, .rightDes {
+      animation: fadeUp 0.8s ease-out forwards;
+      opacity: 0; /* Star hidden */
+   }
+   .leftTitle { animation-delay: 0.1s; }
+   .leftCardInfo { animation-delay: 0.2s; }
+   .mainCard h1 { animation-delay: 0.3s; }
+   .rightHeader { animation-delay: 0.4s; }
+   .rightTitle { animation-delay: 0.5s; }
+   .rightDes { animation-delay: 0.6s; }
+
+   .section img {
+      animation: fadeIn 1.2s ease-out forwards;
    }
    .mainMenu {
       width: 18%;
@@ -227,6 +270,12 @@ body {
       display: grid;
       place-items: center;
       box-shadow: 0 0 25px #f26666cb;
+      transition: all 0.3s ease;
+      cursor: pointer;
+   }
+   .mainCard .send:hover {
+      transform: scale(1.1);
+      box-shadow: 0 0 40px #f43030;
    }
    .mainCardFooter {
       position: absolute;
@@ -267,6 +316,12 @@ body {
       display: grid;
       place-items: center;
       box-shadow: 0 0 20px #ffffffcd;
+      transition: all 0.3s ease;
+      cursor: pointer;
+   }
+   .rightBanner .send:hover {
+      transform: scale(1.1) rotate(-90deg);
+      box-shadow: 0 0 30px #f8b19f;
    }
    .rightHeader {
       padding: 2vw 0;
